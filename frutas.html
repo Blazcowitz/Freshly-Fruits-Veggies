@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frutas - Tienda Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>  <!-- Menú y encabezados -->
+    <h1>Frutas</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="frutas.html">Frutas</a>
+    <a href="verduras.html">Verduras</a>
+    <a href="ofertas.html">Ofertas</a>
+    <!-- Contador dinámico del carrito -->
+    <a href="carrito.html">Carrito <span id="contador-carrito"></span></a>
+  </nav>
+
+ 
+  <section>  <!-- Sección Frutas Citricas -->
+    <h2>Frutas Cítricas</h2>
+    <div class="container">
+      
+      <!-- Producto 1 -->
+      <div class="card">
+        <img src="images/lemon.jpg" alt="Limón">
+        <h3>Limón</h3>
+        <p>Alto en vitamina C, fortalece el sistema inmunológico y ayuda la cicatrización.</p>
+        <p><b>Precio:</b> $3.000 por Kg / $1.500 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-limon">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-limon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+          </select>
+        </label>
+        <button onclick="agregarAlCarrito('Limón','unidad-limon','cantidad-limon',3000,1500)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="card">
+        <img src="images/mandarin.jpg" alt="Mandarina">
+        <h3>Mandarina</h3>
+        <p>Alto contenido de vitamina C, ácido fólico y provitamina A, beneficiosa para la sangre y la piel.</p>
+        <p><b>Precio:</b> $4.000 por Kg / $2.500 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-mandarina">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-mandarina">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </label>
+
+        <button onclick="agregarAlCarrito('Mandarina','unidad-mandarina','cantidad-mandarina',4000,2500)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="card">
+        <img src="images/orange.jpg" alt="Naranja">
+        <h3>Naranja</h3>
+        <p>Rica en vitamina C, folatos y flavonoides, ayuda a la circulación.</p>
+        <p><b>Precio:</b> $5.500 por Kg / $3.000 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-naranja">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-naranja">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+          </select>
+        </label>
+        <button onclick="agregarAlCarrito('Naranja','unidad-naranja','cantidad-naranja',5500,3000)">Agregar al Carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+ 
+  <section>  <!-- Sección Frutas Tropicales -->
+    <h2>Frutas Tropicales</h2>
+    <div class="container">
+
+      <!-- Producto 1 -->
+      <div class="card">
+        <img src="images/mango.jpg" alt="Mango">
+        <h3>Mango</h3>
+        <p>Rico en vitamina C, un atioxidante natural que fortalece el sistema inmunológico.</p>
+        <p><b>Precio:</b> $7.000 por Kg / $3.500 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-mango">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-mango">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Mango','unidad-mango','cantidad-mango',7000,3500)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="card">
+        <img src="images/avocados.jpg" alt="Aguacate">
+        <h3>Aguacate</h3>
+        <p>Rico en grasas saludables y potaseo. Beneficioso para la salud cardiovascular y la piel.</p>
+        <p><b>Precio:</b> $3.500 por Kg / $1.200 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-aguacate">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-aguacate">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Aguacate','unidad-aguacate','cantidad-aguacate',3500,1200)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="card">
+        <img src="images/papaya.jpg" alt="Papaya">
+        <h3>Papaya</h3>
+        <p>Excelente para la digestión y absorción de nutrientes.</p>
+        <p><b>Precio:</b> $4.000 por Kg / $2.000 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-papaya">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-papaya">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Papaya','unidad-papaya','cantidad-papaya',4000,2000)">Agregar al Carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas - Tienda Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Menú y Encabezados -->
+  <header>
+    <h1>Ofertas Especiales</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="frutas.html">Frutas</a>
+    <a href="verduras.html">Verduras</a>
+    <a href="ofertas.html">Ofertas</a>
+    <!-- Contador dinámico del carrito -->
+    <a href="carrito.html">Carrito <span id="contador-carrito"></span></a>
+  </nav>
+
+  <!-- Sección: Ofertas Frutas -->
+  <section>
+    <h2>Ofertas en Frutas</h2>
+    <div class="container">
+
+      <!-- Producto en oferta 1 -->
+      <div class="card">
+        <img src="images/strawberry.jpg" alt="Fresas">
+        <h3>Fresas</h3>
+        <p>Antioxidantes y funcionan como antiinflamatorio natural.</p>
+        <p><b>Precio Oferta:</b> $5.000 por Kg (antes $6.500) / $3.000 por Lb (antes $4.500)</p>
+
+        <label>Unidad:
+          <select id="unidad-fresa">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-fresa">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Fresa','unidad-fresa','cantidad-fresa',5000,3000)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto en oferta 2 -->
+      <div class="card">
+        <img src="images/banana.jpg" alt="Banano">
+        <h3>Banano</h3>
+        <p>Contienen fibra y nutirentes beneficiosos como el potaseo, la vitamina B6.</p>
+        <p><b>Precio Oferta:</b> $3.800 por Kg (antes $5.000) / $2.000 por Lb (antes $4.200)</p>
+
+        <label>Unidad:
+          <select id="unidad-banano">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-banano">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Banano','unidad-banano','cantidad-banano',3800,2000)">Agregar al Carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección: Ofertas Verduras -->
+  <section>
+    <h2>Ofertas en Verduras</h2>
+    <div class="container">
+
+      <!-- Producto en oferta 1 -->
+      <div class="card">
+        <img src="images/tomatoes.jpg" alt="Tomate">
+        <h3>Tomate</h3>
+        <p>Fresco, ideal para ensaladas y salsas.</p>
+        <p><b>Precio Oferta:</b> $1.900 por Kg (antes $2.500)  / $1.000 por Lb (antes $1.900)</p>
+
+        <label>Unidad:
+          <select id="unidad-tomate">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-tomate">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Tomate','unidad-tomate','cantidad-tomate',1900,1000)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto en oferta 2 -->
+      <div class="card">
+        <img src="images/lettuce.jpg" alt="Lechuga">
+        <h3>Lechuga</h3>
+        <p>Nutritiva, diurética y depurativa.</p>
+        <p><b>Precio Oferta:</b> $2.200 por Kg (antes $3.000) / $1.500 por Lb (antes $2.500)</p>
+
+        <label>Unidad:
+          <select id="unidad-lechuga">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-lechuga">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Lechuga','unidad-lechuga','cantidad-lechuga',2200,1500)">Agregar al Carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
+

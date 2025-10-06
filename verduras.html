@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verduras - Tienda Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Menú y Encabezados -->
+  <header>
+    <h1>Verduras</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="frutas.html">Frutas</a>
+    <a href="verduras.html">Verduras</a>
+    <a href="ofertas.html">Ofertas</a>
+    <!-- Contador dinámico del carrito -->
+    <a href="carrito.html">Carrito <span id="contador-carrito"></span></a>
+  </nav>
+
+  <!-- Sección Verdura Fruto-->
+  <section>
+    <h2>Verduras de Fruto</h2>
+    <div class="container">
+
+      <!-- Producto 1 -->
+      <div class="card">
+        <img src="images/tomatoes.jpg" alt="Tomate">
+        <h3>Tomate</h3>
+        <p>Gran fuente de fibra, vitaminas y minerales como la vitamina C, fósforo, magnesio.</p>
+        <p><b>Precio:</b> $2.500 por Kg / $1.200 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-tomate">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-tomate">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Tomate','unidad-tomate','cantidad-tomate',2500,1200)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="card">
+        <img src="images/chili.jpg" alt="Pimentones">
+        <h3>Pimentones</h3>
+        <p>Fortalce el sistema inmunológico, previene el envejecimiento y evita la anemia.</p>
+        <p><b>Precio:</b> $3.800 por Kg / $1.900 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-pimenton">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-pimenton">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Pimentones','unidad-pimenton','cantidad-pimenton',3800,1900)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="card">
+        <img src="images/cucumbers.jpg" alt="Pepino">
+        <h3>Pepino</h3>
+        <p>Fuente rica en agua, minerales fibras y antioxidantes.</p>
+        <p><b>Precio:</b> $5.500 por Kg / 2.500 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-pepino">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-pepino">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Pepino','unidad-pepino','cantidad-pepino',3500,2500)">Agregar al Carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección Raices y Tuberculos -->
+  <section>
+    <h2>Raíces y Tubérculos</h2>
+    <div class="container">
+
+      <!-- Producto 1 -->
+      <div class="card">
+        <img src="images/carrot.jpg" alt="Zanahoria">
+        <h3>Zanahoria</h3>
+        <p>Rica en vitamina A, atioxidante con beneficios en la regeneración celular.</p>
+        <p><b>Precio:</b> $2.000 por Kg / $1.000 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-zanahoria">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-zanahoria">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Zanahoria','unidad-zanahoria','cantidad-zanahoria',2000,1000)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="card">
+        <img src="images/onion.jpg" alt="Cebolla">
+        <h3>Cebolla</h3>
+        <p>Ayuda al rendimiento cardiovascular, actua contra la pérdida de cabello.</p>
+        <p><b>Precio:</b> $1.700 por Kg / $900 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-cebolla">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-cebolla">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+        </label>
+        <button onclick="agregarAlCarrito('Cebolla','unidad-cebolla','cantidad-cebolla',1700,900)">Agregar al Carrito</button>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="card">
+        <img src="images/potatoes.jpg" alt="Papa">
+        <h3>Papa</h3>
+        <p>Aporta nutrientes como el hierro, calcio, fósforo y vitamina C.</p>
+        <p><b>Precio:</b> $8.000 por Kg / $5.000 por Lb</p>
+
+        <label>Unidad:
+          <select id="unidad-papa">
+            <option value="kg">Kilogramo</option>
+            <option value="lb">Libra</option>
+          </select>
+        </label>
+
+        <label>Cantidad:
+          <select id="cantidad-papa">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </label>
+        <button onclick="agregarAlCarrito('Papa','unidad-papa','cantidad-papa',8000,5000)">Agregar al Carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
+
+

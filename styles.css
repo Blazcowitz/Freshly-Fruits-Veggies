@@ -1,0 +1,173 @@
+/* Estilo General*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  margin: 10px 0;
+}
+
+/* Navegación */
+nav {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #ffeb3b;
+}
+
+/* Tarjetas*/
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Botones */
+button {
+  background: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+/* Home */
+.horizontal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.horizontal-card {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.horizontal-card:hover {
+  transform: scale(1.01);
+}
+
+.horizontal-card img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.horizontal-card div {
+  padding: 15px;
+  flex: 1;
+}
+
+/* Carrito*/
+#lista-carrito .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+#lista-carrito .card button {
+  align-self: flex-end;
+  background: #e53935;
+}
+
+#lista-carrito .card button:hover {
+  background: #c62828;
+}
+
+/* Total del carrito */
+#total-carrito {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+#total-carrito h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Botón de finalizar compra */
+.btn-finalizar {
+  background: #2196F3;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 6px;
+}
+
+.btn-finalizar:hover {
+  background: #1976D2;
+}
+
+/* Responsive*/
+@media (max-width: 768px) {
+  .horizontal-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .horizontal-card img {
+    width: 100%;
+  }
+}

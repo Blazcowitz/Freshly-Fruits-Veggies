@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras - Tienda Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ENCABEZADO Y MENÚ -->
+  <header>
+    <h1>Carrito de Compras</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="frutas.html">Frutas</a>
+    <a href="verduras.html">Verduras</a>
+    <a href="ofertas.html">Ofertas</a>
+    <!-- Contador dinámico del carrito -->
+    <a href="carrito.html">Carrito <span id="contador-carrito"></span></a>
+  </nav>
+
+  <!-- Lista de Productos-->
+  <section id="lista-carrito" class="container">
+    <!-- Aquí el JS insertará las tarjetas de los productos -->
+  </section>
+
+  <!-- Total de compra (Se actualiza con JS) -->
+  <div id="total-carrito"></div>
+
+<!-- Boton vaciar carrito -->
+<button id="vaciar-carrito">Vaciar Carrito</button>
+
+</body>
+</html>
