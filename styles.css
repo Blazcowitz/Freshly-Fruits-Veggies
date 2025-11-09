@@ -1,4 +1,6 @@
-/* Estilo General*/
+/* =======================
+   ESTILOS GENERALES
+======================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -18,7 +20,7 @@ h1, h2, h3 {
   margin: 10px 0;
 }
 
-/* Navegación */
+/* === NAVEGACIÓN NORMAL === */
 nav {
   background: #333;
   display: flex;
@@ -26,8 +28,26 @@ nav {
   gap: 20px;
   padding: 12px;
   flex-wrap: wrap;
+  position: relative; /* Normalmente no fija */
+  transition: all 0.3s ease-in-out;
 }
 
+/* Cuando se activa la clase sticky */
+nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Espacio para evitar que el contenido salte */
+body {
+  margin: 0;
+}
+
+/* Enlaces del menú */
 nav a {
   color: white;
   text-decoration: none;
@@ -40,7 +60,10 @@ nav a:hover {
   color: #ffeb3b;
 }
 
-/* Tarjetas*/
+
+/* =======================
+   TARJETAS / CONTENEDORES
+======================= */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -48,7 +71,7 @@ nav a:hover {
   padding: 20px;
 }
 
-.card {
+.card, .item-carrito {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -67,7 +90,9 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* Botones */
+/* =======================
+   BOTONES
+======================= */
 button {
   background: #4CAF50;
   border: none;
@@ -84,7 +109,20 @@ button:hover {
   background: #45a049;
 }
 
-/* Home */
+.btn-finalizar {
+  background: #2196F3;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 6px;
+}
+
+.btn-finalizar:hover {
+  background: #1976D2;
+}
+
+/* =======================
+   HOME (HORIZONTAL)
+======================= */
 .horizontal-container {
   display: flex;
   flex-direction: column;
@@ -116,26 +154,23 @@ button:hover {
   flex: 1;
 }
 
-/* Carrito*/
-#lista-carrito .card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+/* =======================
+   CARRITO
+======================= */
+#lista-carrito .item-carrito {
   text-align: left;
 }
 
-#lista-carrito .card button {
-  align-self: flex-end;
+#lista-carrito button {
   background: #e53935;
 }
 
-#lista-carrito .card button:hover {
+#lista-carrito button:hover {
   background: #c62828;
 }
 
-/* Total del carrito */
 #total-carrito {
-  margin-top: 20px;
+  margin: 20px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -143,24 +178,16 @@ button:hover {
   text-align: center;
 }
 
-#total-carrito h2 {
-  margin-bottom: 15px;
-  color: #333;
+.acciones-carrito {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
 }
 
-/* Botón de finalizar compra */
-.btn-finalizar {
-  background: #2196F3;
-  font-size: 16px;
-  padding: 12px 20px;
-  border-radius: 6px;
-}
-
-.btn-finalizar:hover {
-  background: #1976D2;
-}
-
-/* Responsive*/
+/* =======================
+   RESPONSIVE
+======================= */
 @media (max-width: 768px) {
   .horizontal-card {
     flex-direction: column;
@@ -170,4 +197,96 @@ button:hover {
   .horizontal-card img {
     width: 100%;
   }
+}
+
+/* === ENCABEZADO CON IMAGEN DE FONDO === */
+.titulo-fondo {
+  background-image: url("images/banner.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0; /* alto del banner */
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  border-bottom: 4px solid #4CAF50;
+}
+
+/* Título del encabezado */
+.titulo-fondo h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* === PIE DE PÁGINA === */
+.footer {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 40px 20px 10px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-info, .footer-links, .footer-social {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer a {
+  color: #c8e6c9;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-social img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
