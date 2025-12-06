@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Cargar el script general -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="checkout-container">
+        <h2>Resumen de Compra</h2>
+
+        <div id="resumenCompra">Cargando resumen...</div>
+
+        <h2>Finalizar Compra</h2>
+
+        <label>Nombre Completo</label>
+        <input type="text" id="nombre" placeholder="Tu nombre">
+
+        <label>Número de Contacto</label>
+        <input type="text" id="numero" placeholder="Tu numero">
+
+        <label>Dirección</label>
+        <input type="text" id="direccion" placeholder="Tu dirección">
+
+        <label>Método de Pago</label>
+        <select id="pago">
+            <option value="">Selecciona un método de pago</option>
+            <option>Tarjeta de Crédito</option>
+            <option>Tarjeta Débito</option>
+            <option>PSE</option>
+            <option>Pago Contra Entrega</option>
+            <option>Nequi / Daviplata</option>
+        </select>
+
+        <button class="btn-comprar" onclick="confirmarCompra()">Confirmar Compra</button>
+        <button class="btn-volver" onclick="window.location.href='index.html'">Volver a la Página Principal</button>
+
+    </div>
+
+</body>
+</html>

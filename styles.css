@@ -290,3 +290,101 @@ body {
 main {
   flex: 1;
 }
+
+/* =======================
+   CHECKOUT
+======================= */
+.checkout-container {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.checkout-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+    text-align: left;
+}
+
+/* Etiquetas */
+.checkout-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Inputs */
+.checkout-container input,
+.checkout-container select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* Botón confirmar */
+.checkout-container .btn-comprar {
+    width: 100%;
+    padding: 15px;
+    background: #41b655;
+    border: none;
+    color: white;
+    margin-top: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.checkout-container .btn-comprar:hover {
+    background: #3ba04a;
+}
+
+/* Botón volver */
+.checkout-container .btn-volver {
+    width: 100%;
+    padding: 15px;
+    background: #2196F3;
+    border: none;
+    color: white;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.checkout-container .btn-volver:hover {
+    background: #1976D2;
+}
+
+/* Resumen */
+#resumenCompra {
+    background: #fafafa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+#resumenCompra .producto {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#resumenCompra .total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: right;
+}
+
+
